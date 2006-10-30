@@ -1,0 +1,230 @@
+
+2006-10-30  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* doc/xvidcap/*/xvidcap*.omf: added more meaningful description
+	* configure.in, debian: files, changelog, rule: version bump
+	* src/gnome-xvidcap.glade: added version to about dialog
+
+2006-10-30  Imanol Garcia <imanol.garcia.c@gmail.com>
+	* doc/xvidcap/Makefile.am, doc/xvidcap/es/*: added preliminary
+		Spanish translation of user-guide and manpage
+
+2006-10-29  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* ffmpeg-svn6791/*: updated ffmpeg due to previously bad quality 
+		of mjpeg
+	* src/xtoffmpeg.c: made xtoffmpeg match new ffmpeg version and
+		use libswscale
+	* doc/xvidcap/*/figures: translated screenshots for German 
+		version and used "Simple" GTK theme everywhere as a
+		standard for translators.
+
+2006-10-24  Vincenzo Reale <smart2128@baslug.org>
+	* po/it.po, doc/xvidcap/it/xvidcap.xml-it.po: updated xlation
+
+2006-10-23  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* src/xv_error_item.c: made two missing strings translateable
+	* po/en.po, po/de.po: updated accordingly
+
+2006-10-23  Vincenzo Reale <smart2128@baslug.org>
+	* doc/xvidcap/it/figures/*: added translated screenshots
+	* doc/xvidcap/it/xvidcap.xml-it.po: updated
+	* po/it.po: updated
+
+2006-10-22  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* po/en.po: updated English "translation"
+
+2006-10-22  Vincenzo Reale <smart2128@baslug.org>
+	* doc/xvidcap/it/*, configure.in, doc/xvidcap/Makefile.am:
+		added Italian translation for user manual
+
+2006-10-18  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* po: en.po, es.po, de.po, it.po: updated
+	* doc/xvidcap/C: xvidcap.xml, xvidcap.xml.pot: fixed a few errors
+		in the English original
+	* doc/xvidcap/de: xvidcap-de.po, xvidcap.xml-de.po, xvidcap.xml:
+		completed the user manual translation for German and
+		renamed the po file
+	* doc/xmldocs.make: included automatic translation for user manual
+	* src/gnome-xvidcap.glade: fixed capture result dialog where "play"
+		button was not a stock button
+
+2006-10-13  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* debian/Makefile.am: added debian stuff to EXTRA_DIST
+	* doc/man: man.make, C/Makefile.am, de/Makefile.am, it/Makefile.am:
+		added xv_ENCODING to Makefiles (again?!?)
+	* doc/man/it: xvidcap.1-it.po, xvidcap.1.xml, xvidcap.1: added
+		reworked Italian translation of manpage
+
+2006-10-12  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* configure.in, Makefile.am: added debian/* stuff and TODO.tasks to 
+		EXTRA_DIST
+
+2006-10-10  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* configure.in, src/gnome_ui.c, src/gnome_frame.c,
+		src/gnome_options.c, debian: control, files, changelog, rules:
+		Version bump and elimination of libgnome dependency. Also
+		added yelp as a suggested package for debian package
+	* doc/man: C/Makefile.am, de/Makefile.am: added po/pot to EXTRA_DIST
+	* doc/man/de/xvidcap.1-de.xml: removed (xvidcap.1.xml everywhere)
+	* doc/xvidcap: C/xvidcap.xml, de/xvidcap-de.po: continued
+		German translation of user guide and minor fixes to C original
+	* src/gnome_ui.c: added shortcut STRG-H for help because the stock
+		menu item shows that
+
+2006-10-09  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* doc/man: man.make, C/Makefile.am, de/Makefile.am, it/Makefile.am:
+		make target encoding of manpage configurable per lang
+	* doc/man: man.make, C/xvidcap.1.xml.pot, de/xvidcap.1-de.po:
+		use xml2po rather than po4a
+	* doc/xvidcap: C/xvidcap.xml.pot, de/xvidcap-de.po: initial 
+		preparation for user-guide translation
+
+2006-10-08  Karl H. Beckers  <karl.h.beckers@gmx.net>
+ 	* configure.in, doc/man: C/xvidcap.1, man.make, de/xvidcap.1.xml:
+		integration of po4a to make translation of documentation
+		more maintainable
+
+2006-10-06  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* doc/man: C/xvidcap.1.xml, C/xvidcap.1, de/xvidcap.1.xml, 
+		de/xvidcap.1: German translation of manpage and minor
+		corrections of the English version
+		
+2006-10-04  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* doc/man: man.make, it/xvidcap.1.xml, it/xvidcap.1, de/xvidcap.1.xml,
+		C/xvidcap.1.xml: changed encoding 
+		back to ISO_8859-1 because man is in trouble otherwise. Will
+		need to find a permanent fix when Asian languages come up.
+
+2006-10-02  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* doc/man/C/xvidcap.1.xml, doc/man/de/xvidcap.1.xml, 
+		doc/man/it/xvidcap.1.xml: corrected encoding specification
+		to UTF-8
+
+2006-10-02  Vincenzo Reale <smart2128@baslug.org>
+	* doc/man/it/xvidcap.1.xml: Italian manpage
+
+2006-10-02  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* src: codecs.c, gnome_ui.c, main.c, Makefile.am: some compatibility
+		fixes for Solaris (not all yet, though)
+	* src/gnome_options.c: eliminate use of gtk_combo_box_get_active_text
+		to depend on gtk+-2.0 v. 2.4 only (rather than 2.6)
+	* configure.in, doc/man/Makefile, doc/man/it: Makefile.am, xvidcap.1:
+		support for Italian manpage
+
+2006-09-29  Imanol Garcia <imanol.garcia.c@gmail.com>
+	* po/es.po: added Spanish translation
+
+2006-09-29  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* doc/man/*/Makefile.am, doc/man.make, configure.in: optimized manpage 
+		generation and install
+	* doc/xvidcap/de/*: prepared German translation of manual
+	* Makefile.am: added xvidcap.png and xvidcap.desktop to EXTRA_DIST
+	* Makefile.am: added ppm2mpeg.sh to EXTRA_DIST
+	* src: gnome_warning.c, gnome_ui.c, app_data.h, app_data.c, 
+		gnome_options.c, main.c, options.c, gnome-xvidcap.glade:
+		removed help command setting everywhere
+	* doc/xvidcap/C: figures/xvidcap-warning.png,
+		figures/prefs-commands.png, xvidcap.xml: removed help command
+		setting from the docs, too. Added section for warning dialog.
+	* configure.in: included Spanish translation
+
+2006-09-27  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* doc/man/*, doc/xmldocs.make, doc/omf.make: Migrated manpage
+		to docbook and docbook2x-man generation. Also added
+		architecture for manpage localization.
+
+2006-09-23  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* doc/xmldocs.make: added appid and changed directories to
+		make appid for references work
+	* src: gnome_ui.c, gnome_options.c, gnome-xvidcap.glade:
+		added correct hooks for opening help browser. Also
+		enabled F1 shortcut and made help for preferences
+		dialog open for active tab
+
+2006-09-22  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* doc: first draft of manual
+
+2006-09-21  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* src: gnome_ui.c, capture.c, main.c: made --gui no operation
+		exit on CTRL-C from main.c rather than capture.c 
+		(because I didn't find the place anymore myself ;) and
+		this is more readable). Also added more telling debug
+		statements
+	* src/app_data.c: fixed missing localization for error messages
+		on stdout (--gui no operation)
+	* Makefile.am, configure.in, doc: omf.make, Makefile.am,
+		xmldocs.make, doc/xvidcap-manual/Makefile.am,
+		doc/xvidcap-manual/C/xvidcap-manual.xml: do no longer
+		register doc with scrollkeeper on "install" target,
+		use "make install-doc"
+
+2006-09-19  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* configure.in, doc/xvidcap-manual/C: xvidcap-manual.xml, 
+	  xvidcap-manual-C.omf:
+		various modifications to make docbooks work and register
+		with scrollkeeper
+	* xvidcap.png, xvidcap.desktop, Makefile.am, 
+	  debian: xvidcap.menu, postinst, postrm: various
+		updates to create menu entries
+
+2006-09-17  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* doc/*: initial import of xvidcap online docs
+
+2006-09-11  Vincenzo Reale <smart2128@baslug.org>
+	* po/it.po: added Italian translation
+
+2006-09-11  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* src/gnome-xvidcap.glade: made main control not resizable
+	* src/main.c: fixed segfault with --sync command line arg
+	* po/de.po: fixed some translations
+
+2006-09-10  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* configure.in: fixed libXmu detection in X11R6 paths,
+		including setting runtime search path
+	* ffmpeg-svn19513/libavformat/movenc.c, src/xtoffmpeg.c:
+		fixed root cause for segfault in movenc.c and
+		revert to original
+
+2006-09-07  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* src/gnome_ui.c: removed unconditional debug output
+	* src/codecs.c: fixed bug in the definition of the flv format
+	* src/xtoffmpeg.c: added check for file_oformat != NULL, and 
+		did some optimization to get rid of the "clipping
+		dct coefficient message" (use trellis quant, mbd=2,
+		no obmc, fast ffmpeg operation)
+	* ffmpeg-svn19513/libavformat/movenc.c: fixed NULL pointer,
+		need to watch this gets fixed upstream
+	* src: gnome_ui.c, gnome-xvidcap.glade: added width and height
+		to the results dialog
+	
+2006-09-06  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* src: control.h, gnome_ui.c, main.c: wake up sleeping capture
+		thread when hitting stop
+	* src: app_data.c, app_data.h, gnome_ui.c, gnome_options.c: fix
+		command execution (animate etc.) to handle floating point
+		values for time_pre_frame, needed for fps < 1
+	* src/xtoffmpeg.c: fixed buffer underflows with m2v format
+
+2006-09-05  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* src/gnome_ui.c: fix results dialog's calculation of actual
+		frame rates for fps < 1
+
+2006-09-04  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* src: gnome_options.c, app_data.c: fix for bug # 1551021
+	* src/main.c, man/xvidcap.1: updated usage and man page
+
+2006-09-01  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* configure.in: fixed remainder of bug # 1109935
+	* src/options.c,src/gnome_ui.c: fixed bug # 1109451
+	* src/gnome_options.c: removed debug output
+	* src/codecs.c: made mp3 default for mov format
+
+2006-08-29  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* src/codecs.c: removed fraction fps rates till xvidcap is adapted
+		to changed fractional timing handling in ffmpeg
+	* src/xtoffmpeg.c: fixed ppm/pgm encoding
+
+2006-08-28  Karl H. Beckers  <karl.h.beckers@gmx.net>
+	* debian/files,debian/changelog,debian/rules: version bump
+	* src/gnome_options.c: fixed segfault on reading apps from preferences
+		ui with explicitly set multi-frame file format
+
